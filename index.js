@@ -7,7 +7,7 @@ let moviesListStorage = JSON.parse(localStorage.getItem('moviesList')) || []
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const searchMovie = searchInputEl.value
-    const res = await fetch(`http://www.omdbapi.com/?apikey=ed1d2e58&s=${searchMovie}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=ed1d2e58&s=${searchMovie}`)
     const data = await res.json()
     if(data.Response === 'True') {
         getMovie(data.Search)
@@ -30,7 +30,7 @@ function noMovieFound(){
 function getMovie(movies) {
     let html = ""
     for(let movie of movies){
-        fetch(`http://www.omdbapi.com/?apikey=ed1d2e58&i=${movie.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=ed1d2e58&i=${movie.imdbID}`)
             .then(res => res.json())
             .then(data => {
                 if(!data.Genre.includes("Short")){
