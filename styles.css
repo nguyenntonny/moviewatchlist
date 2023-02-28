@@ -1,0 +1,245 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    max-width: 550px;
+}
+
+.flex {
+    display: flex;
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+
+/* ================= Typography ================= */
+h1, 
+h3, 
+h4,
+a {
+    margin: 0;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+}
+
+a {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: rgba(204, 204, 204, 0.596);
+}
+
+h4, p {
+    font-size: 0.875rem;
+}
+
+h4 {
+    font-weight: 400;
+    color: #111827;
+}
+
+p {
+    color: #6B7280;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+
+.movie-rating {
+    font-size: 0.75rem;
+}
+
+.no-movie-text {
+    font-weight: 700;
+    color: #DFDDDD;
+    max-width: 350px;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.add-movies {
+    color: #363636;
+}
+
+/* Icons */
+
+.fa-star {
+    font-size: 10px;
+    color: #FEC654;
+    padding-left: 5px;
+    vertical-align: middle
+}
+
+.fa-circle-check{
+    color:forestgreen;
+}
+
+/* ================= Layout ================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2.5rem;
+    background: url(images/header.jpg);
+    background-size: cover;
+    background-position-y: 20%;  
+}
+
+.background-tint {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.searched-movie {
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+form {
+    width: 85%;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    display: flex;
+    position: absolute;
+
+}
+
+form input,
+form button {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+form input {
+    flex: 1;
+}
+
+form ::placeholder {
+    color: #6B7280;
+}
+
+form button {
+    background: #F9FAFB;
+    padding: 9px 34px 9px 38px;
+    color: #374151;
+    cursor: pointer;
+    border-left: 1px solid #D1D5DB;
+}
+
+form .fa-magnifying-glass {
+    font-size: 20px;
+    color: #9CA3AF;
+    align-self: center;
+    padding: 11px
+}
+
+/* Watchlist Loader */
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Watchlist */
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.no-data {
+    width: 25%;
+}
+
+.container {
+    width: 73%;
+    max-height: 150px;
+    align-self: center;
+    overflow: hidden;
+}
+
+.watchlist {
+    display: flex;
+    min-height: 570px;
+    width: 85%;
+    margin: 20px auto 10px; 
+    padding: 21px 0;
+    flex-direction: column;
+}
+
+.watchlist .movie-poster {
+    width: 100px;
+    height: 150px;
+    align-self: center;
+    border-radius: 2px;
+}
+
+.title-bar {
+    justify-content: flex-start;
+    gap: 4px;
+    align-items: center;
+}
+
+.detail-bar {
+    margin-top: 10px;
+    gap: 16px;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    background-color: #E5E7EB;
+    border: none;
+    height: 1px;
+}
+
+.watchlist-btn {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+.watchlist-btn:hover,
+.watchlist-btn:active {
+    color: rgba(204, 204, 204, 0.596);
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+
